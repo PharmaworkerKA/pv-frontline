@@ -1,0 +1,39 @@
+{
+  "副作用報告・ICSR": [
+    {"title": "【2026年最新】ICH-E2B(R3)対応ガイド — ICSR電子報告の実務ポイント", "keyword": "E2B(R3) ICSR 対応", "score": 95},
+    {"title": "副作用報告書（ICSR）の書き方完全マニュアル — 初心者から実務者まで", "keyword": "ICSR 書き方 副作用報告", "score": 92},
+    {"title": "日米欧のICSR報告期限比較 — 15日・90日ルールの違いを徹底解説", "keyword": "ICSR 報告期限 比較", "score": 88}
+  ],
+  "シグナル検出": [
+    {"title": "シグナル検出手法PRR・EBGMの計算方法と解釈 — PV統計入門", "keyword": "PRR EBGM シグナル検出", "score": 94},
+    {"title": "FDA FAERSデータを使ったシグナル検出の実践ガイド", "keyword": "FAERS シグナル検出 方法", "score": 90},
+    {"title": "EMAのシグナル管理プロセス — EudraVigilanceの活用法", "keyword": "EudraVigilance シグナル EMA", "score": 86}
+  ],
+  "PBRER/PSUR/DSUR": [
+    {"title": "PBRER作成ガイド — ICH-E2C(R2)に基づくベネフィット・リスク評価の書き方", "keyword": "PBRER 作成 E2C(R2)", "score": 93},
+    {"title": "PSUR/PBRERの違いと移行ポイント — EU規制とICHガイドラインの関係", "keyword": "PSUR PBRER 違い", "score": 89},
+    {"title": "DSUR（開発期安全性報告）の作成手順と提出先一覧", "keyword": "DSUR 作成 開発期", "score": 85}
+  ],
+  "MedDRAコーディング": [
+    {"title": "MedDRAバージョンアップ対応の実務ポイント — コーディング変更管理", "keyword": "MedDRA バージョンアップ 対応", "score": 91},
+    {"title": "MedDRAコーディングの基礎 — PT/LLT/HLT/SOCの使い分けガイド", "keyword": "MedDRA コーディング 基礎", "score": 88},
+    {"title": "MedDRA用語選択の判断基準 — コーダーが迷うケース別対応例", "keyword": "MedDRA 用語選択 コーディング", "score": 84}
+  ],
+  "PV最新ニュース": [
+    {"title": "WHO UMC最新レポート — グローバルPVトレンド2026", "keyword": "WHO UMC PV トレンド 2026", "score": 96},
+    {"title": "EMAファーマコビジランス規制の最新アップデート", "keyword": "EMA PV 規制 最新", "score": 90}
+  ],
+  "各国PV規制比較": [
+    {"title": "日米欧のPV規制徹底比較 — PMDA/FDA/EMAの報告要件の違い", "keyword": "PV規制 比較 日米欧", "score": 93},
+    {"title": "アジア各国のPV規制動向 — 中国NMPA・韓国MFDS・インドCDSCO", "keyword": "アジア PV規制 NMPA MFDS", "score": 87}
+  ],
+  "リスクマネジメント・RMP": [
+    {"title": "医薬品リスクマネジメントプラン（RMP）の作成と運用ガイド", "keyword": "RMP 作成 医薬品", "score": 92},
+    {"title": "EU-RMPとJ-RMPの違い — リスク最小化策の比較", "keyword": "EU-RMP J-RMP 違い", "score": 88},
+    {"title": "FDA REMS（リスク評価軽減戦略）の概要と日本への示唆", "keyword": "REMS FDA リスク管理", "score": 85}
+  ],
+  "海外トレンド翻訳": [
+    {"title": "CIOMS最新ワーキンググループ報告の日本語要約", "keyword": "CIOMS ワーキンググループ PV", "score": 89},
+    {"title": "DIA Global Annual Meeting PVセッションハイライト翻訳", "keyword": "DIA PV セッション 翻訳", "score": 86}
+  ]
+}
