@@ -10,6 +10,9 @@ permissions:
   contents: write
   pages: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -17,14 +20,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
-      - name: blog_engineをチェックアウト
-        uses: actions/checkout@v5
+      - name: Checkout blog_engine
+        uses: actions/checkout@v6
         with:
           repository: MuscleLove-777/blog-engine
           path: blog_engine
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
