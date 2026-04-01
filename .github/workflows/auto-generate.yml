@@ -17,10 +17,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: blog_engineをチェックアウト
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: MuscleLove-777/blog-engine
           path: blog_engine
