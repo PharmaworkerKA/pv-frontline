@@ -24,6 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{% block twitter_title %}{{ blog_name }}{% endblock %}">
     <meta name="twitter:description" content="{% block twitter_description %}{{ blog_description }}{% endblock %}">
+    {% block extra_head %}{% endblock %}
 
     {# RSS #}
     <link rel="alternate" type="application/rss+xml" title="{{ blog_name }}" href="{{ blog_url }}/feed.xml">
