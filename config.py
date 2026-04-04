@@ -9,11 +9,11 @@ BLOG_DESCRIPTION = (
     "医薬品の安全性監視（ファーマコビジランス）の実務知識を毎日更新。"
     "海外の最新PV動向・副作用報告規制を日本語で翻訳・要約し、実務担当者向けに解説。"
 )
-BLOG_URL = "https://musclelove-777.github.io/pv-frontline"
+BLOG_URL = "https://pharmaworkerka.github.io/pv-frontline"
 BLOG_TAGLINE = "海外PV動向を日本語で翻訳・要約"
 BLOG_LANGUAGE = "ja"
 
-GITHUB_REPO = "MuscleLove-777/pv-frontline"
+GITHUB_REPO = "PharmaworkerKA/pv-frontline"
 GITHUB_BRANCH = "gh-pages"
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
