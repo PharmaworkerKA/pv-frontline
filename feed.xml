@@ -5,7 +5,7 @@
     <link>https://pharmaworkerka.github.io/pv-frontline</link>
     <description>医薬品の安全性監視（ファーマコビジランス）の実務知識を毎日更新。海外の最新PV動向・副作用報告規制を日本語で翻訳・要約し、実務担当者向けに解説。</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 05 Apr 2026 05:14:25 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 05:26:14 +0900</lastBuildDate>
     <atom:link href="https://pharmaworkerka.github.io/pv-frontline/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>副作用シグナル検出最前線！PRR・EBGMと緊急安全性情報、ファーマコビジランス実務のポイント</title>
@@ -13,7 +13,7 @@
       <guid>https://pharmaworkerka.github.io/pv-frontline/articles/pharmacovigilance-signal-detection-prr-ebgm-safety-information.html</guid>
       <description></description>
       <category>シグナル検出</category>
-      <pubDate>Sun, 05 Apr 2026 00:00:00 +0900</pubDate>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
       <title>帯状疱疹ワクチンとギラン・バレー症候群：副作用シグナル検出の最前線</title>
@@ -21,7 +21,15 @@
       <guid>https://pharmaworkerka.github.io/pv-frontline/articles/herpes-zoster-vaccine-gbs-signal-detection.html</guid>
       <description></description>
       <category>シグナル検出</category>
-      <pubDate>Sun, 05 Apr 2026 00:00:00 +0900</pubDate>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>ICSR作成と副作用報告の実務ガイド：E2B(R3)時代のファーマコビジランス</title>
+      <link>https://pharmaworkerka.github.io/pv-frontline/articles/icsr-sakusei-fukusayou-houkoku-e2b-r3-pharmacovigilance.html</link>
+      <guid>https://pharmaworkerka.github.io/pv-frontline/articles/icsr-sakusei-fukusayou-houkoku-e2b-r3-pharmacovigilance.html</guid>
+      <description></description>
+      <category>副作用報告・ICSR</category>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
