@@ -1,0 +1,1116 @@
+
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践 | ファーマコビジランス最前線</title>
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="ファーマコビジランス最前線">
+    <link rel="canonical" href="https://pharmaworkerka.github.io/pv-frontline/articles/kouseishinbyoyaku-seikinoshogai-fukusayo-vigibase-signal-detection.html">
+
+    
+    <meta property="og:site_name" content="ファーマコビジランス最前線">
+    <meta property="og:title" content="抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pharmaworkerka.github.io/pv-frontline/articles/kouseishinbyoyaku-seikinoshogai-fukusayo-vigibase-signal-detection.html">
+    <meta property="og:locale" content="ja_JP">
+
+    
+    <meta property="og:image" content="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1200&amp;h=630&amp;fit=crop&amp;auto=format&amp;q=80">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1200&amp;h=630&amp;fit=crop&amp;auto=format&amp;q=80">
+
+    
+    <link rel="alternate" type="application/rss+xml" title="ファーマコビジランス最前線" href="https://pharmaworkerka.github.io/pv-frontline/feed.xml">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSFVD34MKK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CSFVD34MKK');
+    </script>
+    
+
+    
+    
+
+    
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践",
+    "description": "",
+    "datePublished": "2026-04-20",
+    "dateModified": "2026-04-20",
+    "author": {"@type": "Organization", "name": "ファーマコビジランス最前線"},
+    "publisher": {"@type": "Organization", "name": "ファーマコビジランス最前線"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://pharmaworkerka.github.io/pv-frontline/articles/kouseishinbyoyaku-seikinoshogai-fukusayo-vigibase-signal-detection.html"}
+    ,"image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1200&amp;h=630&amp;fit=crop&amp;auto=format&amp;q=80"
+    ,"keywords": "ファーマコビジランス, シグナル検出, 抗精神病薬, 性機能障害, 不均衡分析, VigiBase"
+}
+</script>
+
+
+    <style>
+        /* =============================================
+           CSS変数: テーマカラー（config.THEMEから注入）
+           ============================================= */
+        :root {
+            --color-dark-bg: #1c1917;
+            --color-dark-surface: #16213e;
+            --color-primary: #ea580c;
+            --color-accent: #9a3412;
+            --color-text-dark: #eeeeee;
+            --color-text-muted-dark: #a0aec0;
+
+            --color-light-bg: #fff7ed;
+            --color-light-surface: #ffffff;
+            --color-text-light: #1a202c;
+            --color-text-muted-light: #64748b;
+
+            --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            --max-width: 1280px;
+            --sidebar-width: 320px;
+            --header-height: 64px;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-pill: 9999px;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        [data-theme="dark"] {
+            --bg: var(--color-dark-bg);
+            --surface: var(--color-dark-surface);
+            --text: var(--color-text-dark);
+            --text-muted: var(--color-text-muted-dark);
+            --border: rgba(255,255,255,0.08);
+            --code-bg: rgba(255,255,255,0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: var(--color-light-bg);
+            --surface: var(--color-light-surface);
+            --text: var(--color-text-light);
+            --text-muted: var(--color-text-muted-light);
+            --border: rgba(0,0,0,0.08);
+            --code-bg: #f1f5f9;
+        }
+
+        @media (prefers-color-scheme: light) {
+            [data-theme="auto"] {
+                --bg: var(--color-light-bg);
+                --surface: var(--color-light-surface);
+                --text: var(--color-text-light);
+                --text-muted: var(--color-text-muted-light);
+                --border: rgba(0,0,0,0.08);
+                --code-bg: #f1f5f9;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            [data-theme="auto"] {
+                --bg: var(--color-dark-bg);
+                --surface: var(--color-dark-surface);
+                --text: var(--color-text-dark);
+                --text-muted: var(--color-text-muted-dark);
+                --border: rgba(255,255,255,0.08);
+                --code-bg: rgba(255,255,255,0.06);
+            }
+        }
+
+        /* =============================================
+           リセット・基本
+           ============================================= */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+        }
+
+        /* =============================================
+           流体タイポグラフィ
+           ============================================= */
+        h1 { font-size: clamp(1.75rem, 2.5vw + 1rem, 2.5rem); font-weight: 800; line-height: 1.3; }
+        h2 { font-size: clamp(1.35rem, 1.8vw + 0.8rem, 1.75rem); font-weight: 700; line-height: 1.35; }
+        h3 { font-size: clamp(1.1rem, 1.2vw + 0.6rem, 1.35rem); font-weight: 600; line-height: 1.4; }
+        h4 { font-size: 1.1rem; font-weight: 600; }
+        p { margin-bottom: 1em; }
+
+        a { color: var(--color-accent); text-decoration: none; transition: color 0.2s, opacity 0.2s; }
+        a:hover { opacity: 0.85; text-decoration: underline; }
+        img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
+
+        code {
+            font-family: var(--font-mono);
+            background: var(--code-bg);
+            padding: 0.15em 0.4em;
+            border-radius: 4px;
+            font-size: 0.88em;
+        }
+        pre {
+            background: var(--code-bg);
+            padding: 1.25em;
+            border-radius: var(--radius-sm);
+            overflow-x: auto;
+            margin-bottom: 1.5em;
+            border: 1px solid var(--border);
+        }
+        pre code { background: none; padding: 0; }
+
+        blockquote {
+            border-left: 4px solid var(--color-accent);
+            padding: 0.75em 1.25em;
+            margin: 1.5em 0;
+            color: var(--text-muted);
+            background: var(--code-bg);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1.5em; }
+        th, td { padding: 0.75em 1em; border: 1px solid var(--border); text-align: left; }
+        th { background: var(--code-bg); font-weight: 600; }
+
+        /* =============================================
+           レイアウト
+           ============================================= */
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+        .layout-main { display: flex; gap: 2.5rem; margin-top: 2rem; margin-bottom: 3rem; }
+        .content-area { flex: 1; min-width: 0; }
+        .sidebar { width: var(--sidebar-width); flex-shrink: 0; }
+
+        @media (max-width: 900px) {
+            .layout-main { flex-direction: column; }
+            .sidebar { width: 100%; }
+        }
+
+        /* =============================================
+           ヘッダー
+           ============================================= */
+        .site-header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--header-height);
+        }
+        .site-logo a {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo a:hover { opacity: 1; text-decoration: none; }
+        .header-right { display: flex; align-items: center; gap: 1.5rem; }
+        .site-nav { display: flex; align-items: center; gap: 1.25rem; }
+        .site-nav a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .site-nav a:hover { color: var(--color-accent); text-decoration: none; }
+
+        /* ダークモード切替ボタン */
+        .theme-toggle {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            padding: 6px 10px;
+            font-size: 1.1rem;
+            line-height: 1;
+            color: var(--text);
+            transition: background 0.2s;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-toggle:hover { background: var(--color-primary); }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px auto;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .site-nav {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0; right: 0;
+                background: var(--surface);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+            }
+            .site-nav.open { display: flex; }
+            .site-nav a { padding: 10px 0; min-height: 44px; display: flex; align-items: center; }
+        }
+
+        /* =============================================
+           Bentoカードグリッド
+           ============================================= */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .card:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
+
+        .card-thumb {
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .card-thumb-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: rgba(255,255,255,0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .card-body { padding: 1.25rem 1.5rem; }
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-title a { color: var(--text); }
+        .card-title a:hover { color: var(--color-accent); text-decoration: none; }
+
+        .card-meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .card-excerpt {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+
+        /* モバイル: カード横型 */
+        @media (max-width: 640px) {
+            .card-grid { grid-template-columns: 1fr; }
+            .card { display: flex; flex-direction: row; }
+            .card-thumb { aspect-ratio: 1 / 1; width: 120px; min-height: 120px; flex-shrink: 0; }
+            .card-body { padding: 1rem; flex: 1; min-width: 0; }
+            .card-title { font-size: 0.95rem; }
+            .card-excerpt { -webkit-line-clamp: 2; }
+        }
+
+        /* =============================================
+           タグ（ピル型バッジ）
+           ============================================= */
+        .tag {
+            display: inline-block;
+            padding: 0.2em 0.65em;
+            font-size: 0.75rem;
+            background: var(--code-bg);
+            color: var(--text-muted);
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .tag:hover { background: var(--color-accent); color: #fff; text-decoration: none; }
+
+        .category-badge {
+            display: inline-block;
+            padding: 0.2em 0.7em;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+        }
+        .category-badge:hover { opacity: 0.85; color: #fff; text-decoration: none; }
+
+        .reading-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3em;
+            padding: 0.2em 0.7em;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: rgba(233,69,96,0.12);
+            color: var(--color-accent);
+            border-radius: var(--radius-pill);
+        }
+
+        /* =============================================
+           パンくず・記事本文・目次
+           ============================================= */
+        .breadcrumb {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.85rem; color: var(--text-muted);
+            margin-bottom: 1.5rem; flex-wrap: wrap;
+        }
+        .breadcrumb a { color: var(--text-muted); }
+        .breadcrumb a:hover { color: var(--color-accent); }
+        .breadcrumb-sep { color: var(--text-muted); opacity: 0.5; }
+
+        .article-header { margin-bottom: 2rem; }
+        .article-title {
+            font-size: clamp(1.5rem, 3vw + 0.5rem, 2.2rem);
+            font-weight: 800; line-height: 1.3; margin-bottom: 0.75rem;
+        }
+        .article-meta {
+            display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+            color: var(--text-muted); font-size: 0.88rem;
+        }
+
+        .article-body { font-size: 1rem; line-height: 1.9; }
+        .article-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.4em; border-bottom: 2px solid var(--color-accent); }
+        .article-body h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-body ul, .article-body ol { margin: 1em 0; padding-left: 1.5em; }
+        .article-body li { margin-bottom: 0.4em; }
+
+        .toc-container {
+            background: var(--code-bg); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 2rem;
+        }
+        .toc-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-accent); }
+        .toc-container ul { list-style: none; padding-left: 0; margin: 0; }
+        .toc-container li { margin-bottom: 0.3em; }
+        .toc-container ul ul { padding-left: 1.25em; }
+        .toc-container a { color: var(--text-muted); font-size: 0.88rem; }
+        .toc-container a:hover { color: var(--color-accent); }
+
+        /* =============================================
+           SNSシェア・ページネーション
+           ============================================= */
+        .share-buttons { display: flex; gap: 0.6rem; margin: 2rem 0; flex-wrap: wrap; }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.5em 1em; border-radius: var(--radius-sm);
+            font-size: 0.82rem; font-weight: 600; color: #fff;
+            text-decoration: none; transition: opacity 0.2s; min-height: 44px;
+        }
+        .share-btn:hover { opacity: 0.85; color: #fff; text-decoration: none; }
+        .share-btn-twitter { background: #1DA1F2; }
+        .share-btn-facebook { background: #1877F2; }
+        .share-btn-hatena { background: #00A4DE; }
+        .share-btn-line { background: #06C755; }
+
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin: 2.5rem 0; }
+        .pagination a, .pagination span {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 44px; height: 44px; padding: 0 0.5em;
+            border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 500;
+            text-decoration: none; transition: background 0.2s, color 0.2s;
+        }
+        .pagination a { color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); }
+        .pagination a:hover { background: var(--color-accent); color: #fff; border-color: var(--color-accent); text-decoration: none; }
+        .pagination .current { background: var(--color-accent); color: #fff; border: 1px solid var(--color-accent); }
+
+        /* =============================================
+           サイドバー
+           ============================================= */
+        .sidebar-widget {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.5rem;
+        }
+        .sidebar-widget-title {
+            font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem;
+            padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent);
+        }
+        .sidebar-category-list { list-style: none; padding: 0; }
+        .sidebar-category-list li { margin-bottom: 0.3rem; }
+        .sidebar-category-list a {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.5rem 0; color: var(--text-muted); font-size: 0.88rem;
+            border-bottom: 1px solid var(--border); text-decoration: none; min-height: 44px;
+        }
+        .sidebar-category-list a:hover { color: var(--color-accent); text-decoration: none; }
+        .sidebar-category-count {
+            font-size: 0.78rem; background: var(--code-bg);
+            padding: 0.15em 0.5em; border-radius: var(--radius-pill);
+        }
+
+        .adsense-slot { margin: 1.5rem 0; text-align: center; }
+
+        /* =============================================
+           フッター
+           ============================================= */
+        .site-footer {
+            background: var(--surface); border-top: 1px solid var(--border);
+            padding: 2.5rem 0; margin-top: 3rem;
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; flex-wrap: wrap; gap: 2rem;
+        }
+        .footer-section h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 0.3rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.85rem; }
+        .footer-links a:hover { color: var(--color-accent); }
+        .footer-copyright {
+            text-align: center; margin-top: 2rem; padding-top: 1.5rem;
+            border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-muted);
+        }
+
+        /* =============================================
+           ユーティリティ
+           ============================================= */
+        .text-center { text-align: center; }
+        .text-muted { color: var(--text-muted); }
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mt-3 { margin-top: 1.5rem; }
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .empty-state { text-align: center; padding: 4rem 1rem; color: var(--text-muted); }
+        .empty-state p { font-size: 1.1rem; }
+
+        /* =============================================
+           ヒーロー画像（CSS生成・コスト0）
+           ============================================= */
+        .article-hero {
+            position: relative;
+            aspect-ratio: 21 / 9;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .article-hero-emoji {
+            font-size: clamp(4rem, 8vw, 8rem);
+            z-index: 2;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+            animation: hero-float 3s ease-in-out infinite;
+        }
+        @keyframes hero-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .article-hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 60% 80%, rgba(255,255,255,0.06) 0%, transparent 40%);
+            z-index: 1;
+        }
+        .article-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+
+        /* セクション見出しの絵文字装飾 */
+        .article-body h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* 強調ボックス（blockquote内の💡⚠️✅） */
+        .article-body blockquote {
+            position: relative;
+            padding: 1rem 1.5rem;
+            margin: 1.5em 0;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+        }
+        .article-body blockquote p { margin-bottom: 0.3em; }
+        .article-body blockquote p:last-child { margin-bottom: 0; }
+
+        /* インデックスカードのサムネイルにも絵文字 */
+        .card-thumb-emoji {
+            font-size: 3rem;
+            z-index: 2;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+        }
+
+        /* テーブル装飾強化 */
+        .article-body table {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .article-body th {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: #fff;
+            font-weight: 600;
+        }
+        .article-body tr:nth-child(even) td {
+            background: var(--code-bg);
+        }
+
+        /* 番号付きリスト装飾 */
+        .article-body ol {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-body ol > li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1rem;
+        }
+        .article-body ol > li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="site-logo">
+                <a href="https://pharmaworkerka.github.io/pv-frontline/index.html">ファーマコビジランス最前線</a>
+            </div>
+
+            <div class="header-right">
+                <nav class="site-nav" id="siteNav">
+                    <a href="https://pharmaworkerka.github.io/pv-frontline/index.html">ホーム</a>
+                    
+                    <a href="https://pharmaworkerka.github.io/pv-frontline/feed.xml">RSS</a>
+                </nav>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替" title="ダーク/ライト切替">
+                    <span id="themeIcon">&#9790;</span>
+                </button>
+
+                <button class="menu-toggle" aria-label="メニュー" onclick="document.getElementById('siteNav').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="container">
+        
+<div class="layout-main">
+    <div class="content-area">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <a href="https://pharmaworkerka.github.io/pv-frontline/index.html">ホーム</a>
+            <span class="breadcrumb-sep">/</span>
+            
+            <a href="https://pharmaworkerka.github.io/pv-frontline/category/シグナル検出.html">シグナル検出</a>
+            <span class="breadcrumb-sep">/</span>
+            
+            <span>抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践</span>
+        </nav>
+
+        <article>
+            
+            
+            <div class="article-hero" style="background: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1200&amp;h=630&amp;fit=crop&amp;auto=format&amp;q=80') center/cover no-repeat;">
+                <div class="article-hero-overlay"></div>
+            </div>
+            
+
+            <header class="article-header">
+                <h1 class="article-title">抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践</h1>
+                <div class="article-meta">
+                    <span>2026-04-20</span>
+                    <span class="reading-time">3分で読める</span>
+                    <a href="https://pharmaworkerka.github.io/pv-frontline/category/シグナル検出.html" class="category-badge">シグナル検出</a>
+                </div>
+                <div class="card-tags mt-1"><span class="tag">ファーマコビジランス</span><span class="tag">シグナル検出</span><span class="tag">抗精神病薬</span><span class="tag">性機能障害</span><span class="tag">不均衡分析</span><span class="tag">VigiBase</span></div>
+            </header>
+
+            
+
+            
+            <details class="toc-container" open>
+                <summary class="toc-title" style="cursor:pointer;user-select:none;">目次</summary>
+                <div class="toc"><span class="toctitle">目次</span><ul>
+<li><a href="#_2">この記事でわかること</a></li>
+<li><a href="#_3">結論から言うと</a></li>
+<li><a href="#vigibase_1">抗精神病薬の性機能障害副作用とVigiBaseによるシグナル検出・不均衡分析とは？</a></li>
+<li><a href="#_4">実務での対応手順</a><ul>
+<li><a href="#1icsr">ステップ1：ICSR（個別の症例安全性報告）の収集とデータ化</a></li>
+<li><a href="#2">ステップ2：データベースへの入力と品質管理</a></li>
+<li><a href="#3prr-ebgm">ステップ3：不均衡分析の実施（PRR, EBGMの計算）</a></li>
+<li><a href="#4">ステップ4：シグナルの評価と優先順位付け</a></li>
+<li><a href="#5">ステップ5：規制当局への報告と情報提供</a></li>
+</ul>
+</li>
+<li><a href="#whoemafda">海外の最新動向（WHO/EMA/FDA）</a><ul>
+<li><a href="#who-umcuppsala-monitoring-centre">WHO UMC（Uppsala Monitoring Centre）</a></li>
+<li><a href="#emaeuropean-medicines-agency">EMA（European Medicines Agency）</a></li>
+<li><a href="#fdafood-and-drug-administration">FDA（Food and Drug Administration）</a></li>
+</ul>
+</li>
+<li><a href="#pmda">日本（PMDA）での対応ポイント</a><ul>
+<li><a href="#pmda_1">PMDAにおけるシグナル検出の枠組み</a></li>
+<li><a href="#pmda_2">海外動向とPMDA要件の違い、および実務への応用</a></li>
+</ul>
+</li>
+<li><a href="#_5">各国比較</a></li>
+<li><a href="#faq">よくある質問（FAQ）</a><ul>
+<li><a href="#q1">Q1: 抗精神病薬による性機能障害の報告が増加しているのはなぜですか？</a></li>
+<li><a href="#q2-prrebgm">Q2: PRRとEBGMのどちらを使うべきですか？</a></li>
+<li><a href="#q3">Q3: シグナルが検出された場合、次のステップは何ですか？</a></li>
+<li><a href="#q4-vigibasepv">Q4: VigiBaseのデータは日本のPV業務にどのように活用できますか？</a></li>
+</ul>
+</li>
+<li><a href="#pv">PV実務に役立つリソース</a></li>
+<li><a href="#_6">まとめ</a></li>
+</ul>
+</div>
+
+            </details>
+            
+
+            <div class="article-body"><h1 id="_1">ファーマコビジランス最前線</h1>
+<p><img alt="抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践" src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1200&amp;h=630&amp;fit=crop&amp;auto=format&amp;q=80" /></p>
+<p><em>Photo from <a href="https://unsplash.com/">Unsplash</a></em></p>
+<h1 id="vigibase">抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践</h1>
+<h2 id="_2">この記事でわかること</h2>
+<ul>
+<li>抗精神病薬による性機能障害副作用がなぜ重要か、その背景を理解できます。</li>
+<li>VigiBase（WHO Global ICSRデータベース）を用いたシグナル検出の基礎知識と実務での活用法を学べます。</li>
+<li>PRR（Proportional Reporting Ratio：報告比率）とEBGM（Empirical Bayes Geometric Mean：経験ベイズ幾何平均）という不均衡分析手法の計算方法と解釈のポイントがわかります。</li>
+<li>WHO、EMA、FDA、PMDAにおけるシグナル検出の最新動向と各国の違い、日本のPV実務への応用方法を把握できます。</li>
+<li>抗精神病薬の性機能障害副作用に関する具体的なシグナル検出のステップと注意点を知ることができます。</li>
+</ul>
+<h2 id="_3">結論から言うと</h2>
+<p>抗精神病薬による性機能障害は患者さんのQOL（Quality of Life：生活の質）に大きく影響する副作用であり、早期の<strong>シグナル検出</strong>が不可欠です。<strong>VigiBase</strong>のような大規模データベースを用いた<strong>不均衡分析</strong>（PRR、EBGM）は、この種のシグナルを効率的に特定する強力なツールとなります。海外の規制当局の動向を理解し、日本の<strong>PV業務</strong>（Pharmacovigilance：医薬品安全性監視活動）に取り入れることで、より堅牢な医薬品安全性管理体制を構築できるでしょう。</p>
+<h2 id="vigibase_1">抗精神病薬の性機能障害副作用とVigiBaseによるシグナル検出・不均衡分析とは？</h2>
+<p>皆さん、こんにちは！ファーマコビジランス最前線へようこそ。PV業務10年以上の経験を持つ私が、医薬品安全性管理の最先端情報をお届けします。今回は、特に繊細で重要なテーマである<strong>抗精神病薬</strong>（統合失調症や双極性障害などの精神疾患治療に用いられる薬剤）による<strong>性機能障害</strong>という<strong>副作用</strong>に焦点を当て、<strong>VigiBase</strong>（WHO UMCが管理する世界最大の個別の症例安全性報告（ICSR）データベース）を活用した<strong>シグナル検出</strong>と<strong>不均衡分析</strong>の手法について掘り下げていきます。</p>
+<p>抗精神病薬は、精神疾患を抱える患者さんにとって非常に重要な薬剤ですが、性機能障害、特に性欲減退、勃起不全、射精障害、オーガズム消失などの副作用がしばしば報告されます。これらの副作用は患者さんのQOL（生活の質）を著しく低下させ、服薬アドヒアランス（指示通りに服薬を続けること）の低下にもつながりかねません。そのため、これらの副作用の兆候を早期に捉え、評価し、適切な情報を提供することがPV担当者として非常に重要となります。</p>
+<p><strong>シグナル検出</strong>（Signal Detection）とは、大規模な安全性データベースに蓄積された個別の症例安全性報告（ICSR）の中から、特定の医薬品と特定の有害事象（副作用）の間に、これまで知られていなかった、あるいは関連性が強く疑われる傾向（シグナル）を発見する活動を指します。このシグナル検出を効率的に行うための統計的手法の一つが<strong>不均衡分析</strong>（Disproportionality Analysis）です。</p>
+<p>不均衡分析は、特定の薬剤と特定の有害事象の組み合わせが、偶然では説明できないほど、他の薬剤や他の有害事象と比較して報告が多く集まっているかどうかを統計的に評価します。これにより、膨大なデータの中から「怪しい組み合わせ」を効率的にあぶり出すことができるのです。</p>
+<p>世界中の製薬企業や規制当局が利用しているVigiBaseは、このシグナル検出の強力な基盤となります。VigiBaseには2,800万件を超えるICSRが蓄積されており（出典: <a href="https://www.who-umc.org/vigibase/">WHO UMC VigiBase</a>）、このデータを適切に分析することで、新たなシグナルをグローバルに早期に捉えることが可能になります。</p>
+<h2 id="_4">実務での対応手順</h2>
+<p>抗精神病薬の性機能障害副作用をVigiBaseデータを用いてシグナル検出する際の実務手順は以下の通りです。</p>
+<h3 id="1icsr">ステップ1：ICSR（個別の症例安全性報告）の収集とデータ化</h3>
+<p>医薬品の安全性情報は、医療従事者や患者さんからの報告（自発報告）、臨床試験、文献などから収集されます。これらの情報は、<strong>ICSR</strong>（Individual Case Safety Report：個別の症例安全性報告）としてデータ化されます。</p>
+<ul>
+<li><strong>情報の標準化</strong>: 収集された情報は、ICH（日米EU医薬品規制調和国際会議）が策定した国際的な基準である<strong>ICH-E2B(R3)</strong>（安全性情報の電子的交換に関するガイドライン第3版）に準拠して入力されます。これにより、世界中のデータベース間でデータをスムーズに交換・統合できます。</li>
+<li><strong>用語の標準化</strong>: 疾患名や有害事象名、医薬品名などは、<strong>MedDRA</strong>（Medical Dictionary for Regulatory Activities：医療規制活動用辞書）という国際的な医療用語集を用いてコーディング（分類）されます。例えば、「性欲がなくなった」はMedDRAの「性欲減退（Decreased libido）」、「勃起できない」は「勃起不全（Erectile dysfunction）」のように、標準化された用語に変換します。</li>
+</ul>
+<h3 id="2">ステップ2：データベースへの入力と品質管理</h3>
+<p>自社で収集したICSRは、安全性データベース（例：Argus Safety, Oracle Clinical One Safetyなど）に入力されます。VigiBaseのような大規模なデータベースを利用する場合、自社データベースとVigiBaseのデータ構造が異なるため、適切な抽出・変換が必要です。</p>
+<ul>
+<li><strong>VigiBaseの活用</strong>: WHO UMCに報告されたデータはVigiBaseに蓄積されます。製薬企業はVigiBaseの契約ユーザーとして、自社製品や関連する医薬品の安全性プロファイルを世界規模でモニタリングするためにVigiBaseデータにアクセスできます。これには、特定の薬剤や有害事象に関するICSRの抽出、トレンド分析などが含まれます。</li>
+</ul>
+<h3 id="3prr-ebgm">ステップ3：不均衡分析の実施（PRR, EBGMの計算）</h3>
+<p>いよいよ<strong>シグナル検出</strong>の核心となる不均衡分析です。ここでは、PRRとEBGMの2つの主要な指標を用いて、抗精神病薬と性機能障害の関連性を評価します。</p>
+<h4 id="prrproportional-reporting-ratio">PRR（Proportional Reporting Ratio：報告比率）</h4>
+<p>PRRは、特定の薬剤と特定の有害事象の組み合わせの報告頻度が、データベース全体における報告頻度と比較してどの程度「不均衡」であるかを示す指標です。簡単に言うと、「この薬を飲んだ人がこの副作用を起こす割合」と「他の薬を飲んだ人がこの副作用を起こす割合」を比較します。</p>
+<p><strong>計算方法の概念:</strong>
+以下の2x2の分割表を想定します。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">性機能障害 (事象X)</th>
+<th style="text-align: left;">その他全ての事象 (事象¬X)</th>
+<th style="text-align: left;">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>特定の抗精神病薬 (薬剤A)</strong></td>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">b</td>
+<td style="text-align: left;">a+b</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>その他の薬剤 (薬剤¬A)</strong></td>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">d</td>
+<td style="text-align: left;">c+d</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>合計</strong></td>
+<td style="text-align: left;">a+c</td>
+<td style="text-align: left;">b+d</td>
+<td style="text-align: left;">N=a+b+c+d</td>
+</tr>
+</tbody>
+</table>
+<p>PRRの計算式は次のようになります。</p>
+<p>$$PRR = \frac{a / (a+b)}{c / (c+d)}$$</p>
+<ul>
+<li>a / (a+b) は、特定の抗精神病薬（薬剤A）が報告された全症例のうち、性機能障害（事象X）を伴う症例の割合です。</li>
+<li>c / (c+d) は、その他の薬剤（薬剤¬A）が報告された全症例のうち、性機能障害（事象X）を伴う症例の割合です。</li>
+</ul>
+<p><strong>解釈:</strong>
+*   PRR ＞ 1: 特定の抗精神病薬と性機能障害の関連性が、他の薬剤と比較して不均衡に高いことを示唆します。通常、PRRが2以上で、報告数が3件以上かつカイ二乗値が4以上などの基準を満たす場合に、シグナルの候補とみなされることが多いです。
+*   PRR ≈ 1: 関連性に不均衡がないことを示唆します。</p>
+<h4 id="ebgmempirical-bayes-geometric-mean">EBGM（Empirical Bayes Geometric Mean：経験ベイズ幾何平均）</h4>
+<p>EBGMは、PRRと同様に不均衡を評価する指標ですが、特に報告数が少ない場合でも安定した値を示すように、ベイズ統計学の手法を取り入れています。これにより、希少な副作用や新しい薬剤の初期段階でのシグナル検出に特に有効です。</p>
+<p><strong>計算方法の概念:</strong>
+EBGMは、ベイズ統計学を用いて、事前情報（過去の報告傾向など）と現在の観測データから、真の報告比率を推定します。報告数が少ない場合、ベイズ推定により「報告がないから関係ない」と結論するのではなく、「報告が少ないため、まだ確実なことは言えないが、報告が増えればシグナルとなり得る」というように、より保守的で安定した推定値を提供します。</p>
+<p>$$EBGM = \text{exp}(\mu_i + z_{0.95} \sigma_i)$$
+（簡略化された概念で、実際の計算は複雑な統計モデルに基づきます。）</p>
+<ul>
+<li>EBGMは、通常95%信頼区間の下限値（EB05）が用いられ、この値が1より大きい場合にシグナルとみなされます。EBGMの算出には専用のソフトウェア（例: WHODrug Global Analysis, Oracle Argus Analyticsなど）が利用されます。</li>
+</ul>
+<p><strong>解釈:</strong>
+*   EBGM（またはEB05）＞ 1: 特定の抗精神病薬と性機能障害の関連性が、データベース全体と比較して統計的に有意な不均衡を示していることを示唆します。</p>
+<p><strong>PRRとEBGMの使い分け:</strong>
+*   PRRは直感的で計算も比較的容易ですが、報告数が少ないと信頼性が低下しやすいです。
+*   EBGMは、報告数が少ない場合でも安定したシグナル検出が可能で、より統計的に厳密な評価ができます。実務では両方を併用したり、EBGMを主要な指標とするケースが多いです。</p>
+<h3 id="4">ステップ4：シグナルの評価と優先順位付け</h3>
+<p>不均衡分析によって検出された「シグナル候補」は、PV専門家による詳細な評価が必要です。単に統計的に不均衡が見られたからといって、直ちに「副作用」と断定できるわけではありません。</p>
+<ul>
+<li><strong>個別症例のレビュー</strong>: 検出されたシグナルに関連する個々のICSRを詳細にレビューし、薬剤と事象の時間的関係、既往歴、併用薬、脱薬・再投与情報（Dechallenge/Rechallenge）などを確認します。</li>
+<li><strong>文献調査</strong>: 既知の科学的文献や臨床試験データ、非臨床試験データなどを調査し、生物学的妥当性（biological plausibility）があるかを確認します。</li>
+<li><strong>専門家による議論</strong>: 医師、薬剤師、統計家などの専門家チームで議論し、シグナルの重要性や優先順位を決定します。</li>
+</ul>
+<h3 id="5">ステップ5：規制当局への報告と情報提供</h3>
+<p>最終的にシグナルとして確定された情報、あるいはその疑いが強い情報は、規制当局へ報告されます。また、必要に応じて医薬品添付文書の改訂や、医療従事者への注意喚起などが行われます。</p>
+<ul>
+<li><strong>PBRER（Periodic Benefit-Risk Evaluation Report：定期的なベネフィット・リスク評価報告書）</strong>: 医薬品の全ライフサイクルを通じて定期的に提出される報告書で、安全性情報の集積、評価、新たなシグナルの有無などが記載されます。シグナル検出の結果もPBRERに反映されます。</li>
+</ul>
+<h2 id="whoemafda">海外の最新動向（WHO/EMA/FDA）</h2>
+<p>海外の主要な規制当局や機関は、大規模データベースを用いたシグナル検出に積極的に取り組んでいます。抗精神病薬の性機能障害副作用についても、これらの動向は重要です。</p>
+<h3 id="who-umcuppsala-monitoring-centre">WHO UMC（Uppsala Monitoring Centre）</h3>
+<p><strong>WHO UMC</strong>は、WHO（世界保健機関）と協力してVigiBaseを管理し、世界中の加盟国からのICSRを集約しています。VigiBaseは、2024年現在で2,800万件を超えるICSRを保有する世界最大のデータベースです。WHO UMCは、VigiBaseデータを活用し、定期的にシグナル検出活動を行い、新たな安全性懸念を特定しています。</p>
+<ul>
+<li><strong>VigiLyze</strong>: WHO UMCは、ユーザーがVigiBaseデータにアクセスし、PRR、EBGMなどの不均衡分析ツールを用いてシグナル検出を行うためのWebベースの分析プラットフォーム「VigiLyze」を提供しています。これは製薬企業や規制当局がグローバルな視点で自社製品の安全性プロファイルをモニタリングする上で不可欠なツールとなっています。</li>
+<li><strong>CIOMS XI</strong>: CIOMS（Council for International Organizations of Medical Sciences：国際医科学団体協議会）は、PVに関する多くのガイドラインを策定しています。特に「CIOMS XI: Practical Approaches to Signal Detection in Pharmacovigilance」では、シグナル検出の手法、プロセス、不均衡分析の活用法について詳細なガイダンスを提供しており、WHO UMCの活動の基盤となっています。<ul>
+<li>出典: <a href="https://cioms.ch/publications/cioms-report-no-11-practical-approaches-to-signal-detection-in-pharmacovigilance-2010/">CIOMS</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="emaeuropean-medicines-agency">EMA（European Medicines Agency）</h3>
+<p>欧州連合（EU）の医薬品規制当局である<strong>EMA</strong>は、<strong>EudraVigilance</strong>（欧州医薬品庁の安全性データベース）を運用しています。EudraVigilanceには、EU域内で承認された医薬品のICSRが蓄積されており、EMAの<strong>PRAC</strong>（Pharmacovigilance Risk Assessment Committee：医薬品リスク評価委員会）がシグナル検出と評価の中心的な役割を担っています。</p>
+<ul>
+<li><strong>GVP Module IX</strong>: EMAのGVP（Good Pharmacovigilance Practices：安全性監視に関する優良実施基準）の「Module IX: Signal Management」では、シグナルの特定、検証、評価、行動、管理に関する詳細な要件が規定されています。不均衡分析は、EudraVigilanceデータを用いたシグナル特定フェーズで推奨される主要な手法の一つです。</li>
+<li><strong>自動シグナル検出</strong>: EudraVigilanceシステムでは、PRRやBCPNN（Bayesian Confidence Propagation Neural Network：ベイズ信頼度伝播ニューラルネットワーク）などの統計的手法を用いた自動シグナル検出が行われ、PRACの専門家によるレビューに供されます。<ul>
+<li>出典: <a href="https://www.ema.europa.eu/en/human-regulatory/post-authorisation/pharmacovigilance/good-pharmacovigilance-practices-human-medicinal-products">EMA GVP Module IX</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="fdafood-and-drug-administration">FDA（Food and Drug Administration）</h3>
+<p>米国FDAは、<strong>FAERS</strong>（FDA Adverse Event Reporting System：FDA有害事象報告システム）というデータベースを運用し、米国で市販されている医薬品のICSRを収集しています。FDAもFAERSデータを用いて、定期的にシグナル検出を行っています。</p>
+<ul>
+<li><strong>AERSmining</strong>: FDAは、FAERSデータからシグナルを検出するためのデータマイニングツール「AERSmining」を使用しています。このツールは、PRRやROR（Reporting Odds Ratio：報告オッズ比）などの不均衡分析の手法を統合しており、シグナル検出の初期段階で活用されています。</li>
+<li><strong>Postmarket Safety Signal Detection and Evaluation</strong>: FDAは、市販後安全性シグナル検出と評価に関する詳細なプロセスを定めており、統計的手法と臨床的評価を組み合わせてシグナルに対応しています。特に、抗精神病薬のようなCNS（中枢神経系）作用薬では、性機能障害のようなQOLに直結する副作用が注視されます。<ul>
+<li>出典: <a href="https://www.fda.gov/drugs/guidance-compliance-regulatory-information/guidances-drugs">FDA Guidance for Industry: Postmarket Safety Signal Detection and Evaluation</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="pmda">日本（PMDA）での対応ポイント</h2>
+<p>日本の医薬品医療機器総合機構（<strong>PMDA</strong>）も、海外の動向を踏まえつつ、国内の医薬品安全性情報の収集・評価に力を入れています。日本の製薬企業・CRO（医薬品開発業務受託機関）の安全性担当者は、PMDAの要件と海外のトレンドを理解し、実務に落とし込む必要があります。</p>
+<h3 id="pmda_1">PMDAにおけるシグナル検出の枠組み</h3>
+<p>PMDAは、医薬品医療機器等法に基づき、製薬企業からの副作用等報告や医療機関からの自発報告（独立行政法人医薬品医療機器総合機構安全性情報報告制度）を収集しています。これらの情報を集約し、独自の<strong>シグナル検出</strong>プロセスを通じて、医薬品の新たな安全性懸念を評価しています。</p>
+<ul>
+<li><strong>日本のデータベース</strong>: PMDAは自社で安全性データベースを構築しており、収集した副作用等報告を管理・分析しています。海外の主要なデータベースと比較すると規模は小さいですが、日本の患者層に特化した情報として重要です。</li>
+<li><strong>PMDAの評価プロセス</strong>: PMDAでは、シグナル候補が検出された場合、薬事・食品衛生審議会の専門部会などで専門家による詳細な評価が行われます。海外の規制当局と同様に、個別の症例レビュー、文献調査、疫学研究の結果などを総合的に判断し、必要に応じて添付文書改訂や注意喚起を指示します。</li>
+</ul>
+<h3 id="pmda_2">海外動向とPMDA要件の違い、および実務への応用</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">WHO UMC/EMA/FDA（海外）</th>
+<th style="text-align: left;">PMDA（日本）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>主要データベース</strong></td>
+<td style="text-align: left;">VigiBase, EudraVigilance, FAERS</td>
+<td style="text-align: left;">国内副作用等報告データベース（PMDA管理）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>シグナル検出の法的要件</strong></td>
+<td style="text-align: left;">GVP Module IX (EU), CFR (US)など詳細なガイドライン</td>
+<td style="text-align: left;">医薬品医療機器等法に基づく副作用等報告・評価義務</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>採用される統計手法</strong></td>
+<td style="text-align: left;">PRR, EBGM, ROR, BCPNNなど多岐にわたる</td>
+<td style="text-align: left;">報告数の増減、時系列分析、不均衡分析（限定的）など</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>シグナル評価体制</strong></td>
+<td style="text-align: left;">PRAC (EMA), OPR (FDA), WHO UMCの専門家会議など大規模</td>
+<td style="text-align: left;">薬事・食品衛生審議会専門部会など</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>国際連携</strong></td>
+<td style="text-align: left;">ICH-E2B(R3)準拠、VigiBaseへの報告義務（一部）</td>
+<td style="text-align: left;">ICH-E2B(R3)準拠、VigiBaseへの情報提供（任意）</td>
+</tr>
+</tbody>
+</table>
+<p>日本のPV担当者は、グローバル企業の場合、自社の安全性データベースを通じて海外の規制当局への報告を行うだけでなく、PMDAへの国内報告も適時に行う必要があります。<strong>ICH-E2B(R3)</strong>に準拠したデータ交換は、海外とPMDA間の情報連携を円滑にしますが、各国独自の規制要件（例えば、報告期限やフォーマットの細かな違い）には注意が必要です。</p>
+<p><strong>実務へのアドバイス:</strong>
+1.  <strong>グローバルな視点でのモニタリング</strong>: VigiBaseやEudraVigilanceのデータを積極的に活用し、自社製品（特に抗精神病薬）における性機能障害の副作用について、グローバルな発生傾向や新たなシグナル候補を早期に把握しましょう。
+2.  <strong>不均衡分析の活用</strong>: 自社データベースやVigiBaseデータを用いて、定期的にPRRやEBGMなどの不均衡分析を実施し、シグナル検出の客観性を高めます。特に、国内で症例が少ない場合でも、海外のデータから早期シグナルを捉えることが可能です。
+3.  <strong>PMDAへの情報提供</strong>: 海外で検出された重要なシグナルや安全性情報は、PMDAへの定期報告（PBRERなど）や、必要に応じて速報として情報提供を行うことが求められます。PMDAのガイドラインに沿った適切な対応を心がけましょう。
+4.  <strong>専門家との連携</strong>: 精神科医や統計の専門家と連携し、検出されたシグナルの臨床的意義や統計的妥当性を深く評価する体制を整えることが重要です。</p>
+<h2 id="_5">各国比較</h2>
+<p>医薬品安全性情報のシグナル検出における主要機関・規制当局の比較を表にまとめました。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">WHO UMC (VigiBase)</th>
+<th style="text-align: left;">EMA (EudraVigilance)</th>
+<th style="text-align: left;">FDA (FAERS)</th>
+<th style="text-align: left;">PMDA (国内報告)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>役割</strong></td>
+<td style="text-align: left;">グローバルデータ集積・シグナル検出</td>
+<td style="text-align: left;">EU域内データ集積・評価・規制</td>
+<td style="text-align: left;">米国域内データ集積・評価・規制</td>
+<td style="text-align: left;">日本国内データ集積・評価・規制</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>主要データベース</strong></td>
+<td style="text-align: left;">VigiBase</td>
+<td style="text-align: left;">EudraVigilance</td>
+<td style="text-align: left;">FAERS</td>
+<td style="text-align: left;">PMDA安全性情報データベース</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>データソース</strong></td>
+<td style="text-align: left;">世界各国の加盟国からのICSR</td>
+<td style="text-align: left;">EU加盟国のICSR、企業報告</td>
+<td style="text-align: left;">米国からのICSR、企業報告</td>
+<td style="text-align: left;">日本国内からのICSR（企業、医療機関）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>主な統計手法</strong></td>
+<td style="text-align: left;">PRR, EBGM, BCPNN</td>
+<td style="text-align: left;">PRR, BCPNNなど (GVP Module IX)</td>
+<td style="text-align: left;">PRR, RORなど (AERSmining)</td>
+<td style="text-align: left;">報告数分析、時系列分析、不均衡分析（一部）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>シグナル評価組織</strong></td>
+<td style="text-align: left;">専門家会議 (VigiFlow)</td>
+<td style="text-align: left;">PRAC (Pharmacovigilance Risk Assessment Committee)</td>
+<td style="text-align: left;">Postmarket Safety Team</td>
+<td style="text-align: left;">薬事・食品衛生審議会 安全対策調査会</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>規制文書/ガイダンス</strong></td>
+<td style="text-align: left;">CIOMS XI</td>
+<td style="text-align: left;">GVP Module IX</td>
+<td style="text-align: left;">Guidance for Industry: Postmarket Safety Signal Detection</td>
+<td style="text-align: left;">医薬品医療機器等法、各種通知</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>抗精神病薬の性機能障害への注目度</strong></td>
+<td style="text-align: left;">高い (QOL影響大)</td>
+<td style="text-align: left;">高い (GVPで重視)</td>
+<td style="text-align: left;">高い (患者QOL重視)</td>
+<td style="text-align: left;">高い (患者QOL、服薬継続性)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ICH-E2B(R3)対応</strong></td>
+<td style="text-align: left;">全面的に推奨・準拠</td>
+<td style="text-align: left;">全面的に義務化・準拠</td>
+<td style="text-align: left;">全面的に推奨・準拠</td>
+<td style="text-align: left;">全面的に推奨・準拠</td>
+</tr>
+</tbody>
+</table>
+<p>この比較表からもわかるように、グローバルなシグナル検出のアプローチは、基本的な考え方や統計手法において共通点が多いものの、データベースの規模、法的拘束力、評価体制においてそれぞれ特色があります。特にVigiBaseはグローバルな視点から幅広い情報を提供し、各国の規制当局が自国のデータを補完する形で活用していることが理解できます。</p>
+<h2 id="faq">よくある質問（FAQ）</h2>
+<h3 id="q1">Q1: 抗精神病薬による性機能障害の報告が増加しているのはなぜですか？</h3>
+<p><strong>A1</strong>: いくつかの要因が考えられます。まず、医療従事者や患者さんの間での副作用に対する認識が高まり、以前は報告されにくかったデリケートな問題も積極的に報告されるようになったことが挙げられます。次に、抗精神病薬の処方数自体が増加していること、特定の薬剤がプロラクチン（Proclactin）上昇作用などにより性機能障害を引き起こしやすい生理学的メカニズムが明らかになっていることも影響しています。患者さんのQOLへの配慮が重要視される現代において、副作用報告の促進は良い傾向と言えるでしょう。</p>
+<h3 id="q2-prrebgm">Q2: PRRとEBGMのどちらを使うべきですか？</h3>
+<p><strong>A2</strong>: PRR（Proportional Reporting Ratio：報告比率）は計算が比較的簡単で直感的に理解しやすいため、初期のスクリーニングに適しています。しかし、報告数が非常に少ない場合には信頼性が低くなる傾向があります。一方、EBGM（Empirical Bayes Geometric Mean：経験ベイズ幾何平均）はベイズ統計学に基づいているため、報告数が少ない場合でもより安定した、信頼性の高いシグナルを検出できます。実務では、まずPRRで大まかな傾向を把握し、その後EBGMで統計的により厳密な評価を行う、あるいは両方を併用して総合的に判断することが推奨されます。特に、希少な副作用や新規薬剤についてはEBGMが有効です。</p>
+<h3 id="q3">Q3: シグナルが検出された場合、次のステップは何ですか？</h3>
+<p><strong>A3</strong>: シグナルが検出された場合、それは「疑わしい傾向が見つかった」段階であり、直ちに「副作用」と断定することはできません。次のステップとして、まず<strong>シグナル検証</strong>（Signal Validation）が必要です。これは、個々のICSRの詳細なレビュー（Dechallenge/Rechallenge情報、併用薬、既往歴の確認など）、関連する科学文献や臨床試験データの詳細な調査、そして場合によっては疫学研究の実施可能性の検討を含みます。これらの評価を通じてシグナルが「確定」された場合、リスクマネジメント計画（RMP：Risk Management Plan）への反映、医薬品添付文書の改訂、医療従事者や患者さんへの注意喚起など、適切なリスク最小化措置を講じることになります。</p>
+<h3 id="q4-vigibasepv">Q4: VigiBaseのデータは日本のPV業務にどのように活用できますか？</h3>
+<p><strong>A4</strong>: VigiBaseは世界中のICSRを集約しているため、日本のPV業務において非常に有用な情報源となります。具体的には、以下の活用法が考えられます。
+1.  <strong>海外での早期シグナル検出</strong>: 日本でまだ報告が少ない、あるいは未承認の薬剤であっても、海外で先にシグナルが検出される可能性があります。VigiBaseを定期的にモニタリングすることで、これらの早期シグナルを捕捉し、国内でのリスク評価に役立てることができます。
+2.  <strong>グローバルな安全性プロファイルの比較</strong>: 自社製品の安全性プロファイルをVigiBaseデータと比較することで、特定の副作用の発生率が世界的に見てどのような位置づけにあるか、また人種差や地域差がないかなどを評価できます。
+3.  <strong>リスク評価の強化</strong>: 国内で発生した副作用の評価を行う際、VigiBaseから得られる大規模なデータは、当該副作用の既知の情報や他の薬剤との比較など、リスク評価を補強する客観的な根拠となり得ます。
+4.  <strong>新規開発品の安全性予測</strong>: 類似薬のVigiBaseデータを参照することで、新規開発品の安全性プロファイルを予測し、臨床開発段階での安全性監視計画に役立てることも可能です。</p>
+<h2 id="pv">PV実務に役立つリソース</h2>
+<p>この記事の内容をさらに深めるために、以下のリソースが役立ちます。</p>
+<ul>
+<li><strong><a href="https://www.amazon.co.jp?tag=musclelove07-22">Amazon PV書籍</a></strong> - PV・安全性監視の実務参考書</li>
+<li><strong><a href="https://www.udemy.com">Udemy 安全性管理講座</a></strong> - 動画で学ぶPV実務</li>
+<li><strong><a href="https://www.rakuten.co.jp">楽天 医薬品安全性書籍</a></strong> - 副作用報告・安全性監視の参考書</li>
+</ul>
+<p><em>上記リンクからご利用いただくと、サイト運営の支援になります。</em></p>
+<h2 id="_6">まとめ</h2>
+<p>今回は、抗精神病薬による性機能障害副作用という重要なテーマに対し、<strong>VigiBase</strong>を用いた<strong>シグナル検出</strong>と<strong>不均衡分析</strong>（PRR, EBGM）の手法、そして国内外の<strong>PV規制動向</strong>について詳しく解説しました。</p>
+<p>抗精神病薬の性機能障害は、患者さんのQOLに深刻な影響を及ぼし、服薬継続に支障をきたす可能性のある重要な<strong>副作用</strong>です。PV担当者として、この種のシグナルを早期に、かつ正確に検出することは、患者さんの安全と医薬品の適正使用を推進する上で不可欠な責務と言えます。</p>
+<p>WHO UMCのVigiBase、EMAのEudraVigilance、FDAのFAERSといった大規模データベースを活用した不均衡分析は、膨大なICSRデータの中から新たな安全性懸念を効率的に特定するための強力なツールです。PRRやEBGMといった統計的手法を正しく理解し、実務で使いこなすことで、より質の高い<strong>シグナル検出</strong>が可能となります。</p>
+<p>また、海外のPV規制当局（WHO UMC, EMA, FDA）の最新動向を常に把握し、PMDAの要件との違いを理解することは、グローバルな安全性管理体制を構築し、日本の<strong>PV業務</strong>を国際水準に高める上で非常に重要です。海外の豊富な事例を日本の実務に落とし込み、臨床専門家や統計専門家と密に連携しながら、患者さんの安全を最優先とした医薬品安全性監視活動を推進していきましょう。今回の情報が、皆さんの日々のPV業務の一助となれば幸いです。</p>
+<p>次回も、ファーマコビジランスの最前線から、皆さんの実務に役立つ情報をお届けします。どうぞお楽しみに！</p></div>
+
+            
+
+            <div class="share-buttons">
+                <a class="share-btn share-btn-twitter" href="https://twitter.com/intent/tweet?url=https://pharmaworkerka.github.io/pv-frontline/articles/kouseishinbyoyaku-seikinoshogai-fukusayo-vigibase-signal-detection.html&text=抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践" target="_blank" rel="noopener noreferrer">X でシェア</a>
+                <a class="share-btn share-btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://pharmaworkerka.github.io/pv-frontline/articles/kouseishinbyoyaku-seikinoshogai-fukusayo-vigibase-signal-detection.html" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="share-btn share-btn-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&url=https://pharmaworkerka.github.io/pv-frontline/articles/kouseishinbyoyaku-seikinoshogai-fukusayo-vigibase-signal-detection.html&title=抗精神病薬の性機能障害副作用をVigiBaseで検出！不均衡分析の実践" target="_blank" rel="noopener noreferrer">はてブ</a>
+                <a class="share-btn share-btn-line" href="https://social-plugins.line.me/lineit/share?url=https://pharmaworkerka.github.io/pv-frontline/articles/kouseishinbyoyaku-seikinoshogai-fukusayo-vigibase-signal-detection.html" target="_blank" rel="noopener noreferrer">LINE</a>
+            </div>
+        </article>
+
+        
+    </div>
+</div>
+
+    </main>
+
+    
+    
+
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-section">
+                    <h4>ファーマコビジランス最前線</h4>
+                    <p class="text-muted" style="font-size:0.85rem;max-width:300px;">医薬品の安全性監視（ファーマコビジランス）の実務知識を毎日更新。海外の最新PV動向・副作用報告規制を日本語で翻訳・要約し、実務担当者向けに解説。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>カテゴリ</h4>
+                    <ul class="footer-links"></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>リンク</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://pharmaworkerka.github.io/pv-frontline/sitemap.xml">サイトマップ</a></li>
+                        <li><a href="https://pharmaworkerka.github.io/pv-frontline/feed.xml">RSSフィード</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">&copy; 2026 ファーマコビジランス最前線. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        var toggle = document.getElementById('themeToggle');
+        var icon = document.getElementById('themeIcon');
+        var html = document.documentElement;
+        function getStored() { try { return localStorage.getItem('theme'); } catch(e) { return null; } }
+        function setTheme(t) {
+            html.setAttribute('data-theme', t);
+            icon.textContent = t === 'light' ? '\u2600' : '\u263E';
+            try { localStorage.setItem('theme', t); } catch(e) {}
+        }
+        var s = getStored(); if (s) setTheme(s);
+        toggle.addEventListener('click', function() {
+            setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+    })();
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="http"]').forEach(function(l) {
+            if (l.hostname !== window.location.hostname) {
+                l.setAttribute('target', '_blank');
+                l.setAttribute('rel', 'noopener noreferrer');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
