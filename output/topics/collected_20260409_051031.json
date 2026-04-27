@@ -1,0 +1,347 @@
+{
+  "collected_at": "2026-04-09T05:10:31.979216",
+  "total_count": 31,
+  "topics": [
+    {
+      "title": "A Scoping Review of Case-Level Causality Assessment Tools Developed Between 2008 and 2023; Strengths, Weaknesses and Potential Future Improvements",
+      "url": "https://link.springer.com/article/10.1007/s40264-026-01665-7",
+      "summary": "",
+      "published": "",
+      "source": "Drug Safety Journal",
+      "score": 95,
+      "category": "副作用報告・ICSR, シグナル検出",
+      "blog_title": "医薬品副作用の因果関係評価ツール最前線：PVの核心を探るスクーピングレビュー",
+      "keyword": "因果関係評価、副作用報告、ICSR、ファーマコビジランス、シグナル検出、安全性評価ツール"
+    },
+    {
+      "title": "å»è¬åãªã¹ã¯ç®¡çè¨ç»ï¼RMPï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/items-information/rmp/0002.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 95,
+      "category": "リスクマネジメント・RMP, PV最新ニュース",
+      "blog_title": "医薬品リスク管理計画（RMP）の全貌：製薬企業と患者を守る安全性監視の要",
+      "keyword": "RMP、リスク管理計画、ファーマコビジランス、医薬品安全性、PV規制"
+    },
+    {
+      "title": "ç·æ¥å®å¨æ§æå ±ã»å®å¨æ§éå ±",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/esc-rsc/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 95,
+      "category": "シグナル検出, 副作用報告・ICSR, PV最新ニュース",
+      "blog_title": "緊急安全性情報・安全性速報の舞台裏：医薬品リスクから患者を守る最速の警告",
+      "keyword": "緊急安全性情報、安全性速報、シグナル検出、ファーマコビジランス、医薬品リスク"
+    },
+    {
+      "title": "ä½¿ç¨ä¸ã®æ³¨æã®æ¹è¨æç¤ºæå ±",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/revision-of-precautions/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 95,
+      "category": "シグナル検出, PV最新ニュース",
+      "blog_title": "知っておきたい！医薬品『使用上の注意』改訂指示の背景とPVの役割",
+      "keyword": "使用上の注意、添付文書改訂、シグナル検出、ファーマコビジランス、PV規制"
+    },
+    {
+      "title": "å»è¬åã»å»çæ©å¨ç­å®å¨æ§æå ±ï¼åçå´åççºè¡ï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/devices/0097.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 95,
+      "category": "PV最新ニュース, 副作用報告・ICSR, シグナル検出",
+      "blog_title": "厚生労働省発！医薬品・医療機器安全性情報から読み解く最新のPV動向",
+      "keyword": "安全性情報、厚生労働省、ファーマコビジランス、PVニュース、医療機器安全性"
+    },
+    {
+      "title": "éç¯¤å¯ä½ç¨ç¾æ£å¥å¯¾å¿ããã¥ã¢ã«ï¼å»çé¢ä¿èåãï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/adr-info/manuals-for-hc-pro/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 95,
+      "category": "リスクマネジメント・RMP, 副作用報告・ICSR",
+      "blog_title": "医療関係者必読：重篤副作用疾患別対応マニュアルが示す安全性管理の要点とPVの連携",
+      "keyword": "重篤副作用、医療関係者、リスクマネジメント、安全性情報、医療現場"
+    },
+    {
+      "title": "å¯ä½ç¨ãçãããçä¾å ±åã«é¢ããæå ±",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/adr-info/suspected-adr/0005.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 95,
+      "category": "副作用報告・ICSR",
+      "blog_title": "副作用報告の重要性：疑わしい症例を見逃さないための情報とPVの役割",
+      "keyword": "副作用報告、ICSR、ファーマコビジランス、安全性情報、症例報告"
+    },
+    {
+      "title": "Artificial Intelligence in Pharmacovigilance",
+      "url": "https://cioms.ch/artificial-intelligence-inpv/?utm_source=rss&utm_medium=rss&utm_campaign=artificial-intelligence-in-pharmacovigilance",
+      "summary": "This report on Artificial intelligence in pharmacovigilance addresses a rapidly emerging cross-disciplinary field that is at the intersection of pharmacovigilance, computer science, mathematics, regulation, law, medicine, human rights, psychology and social science. Consequently, just as with medici",
+      "published": "Tue, 25 Nov 2025 15:16:37 +0000",
+      "source": "CIOMS",
+      "score": 95,
+      "category": "PV最新ニュース, シグナル検出, 副作用報告・ICSR",
+      "blog_title": "ファーマコビジランスの未来を拓くAI：安全性監視の効率化と精度向上",
+      "keyword": "AI、ファーマコビジランス、シグナル検出、ICSR処理、PV技術、DX"
+    },
+    {
+      "title": "Benefit-risk balance for medicinal products",
+      "url": "https://cioms.ch/publications/product/benefit-risk-balance-for-medicinal-products/?utm_source=rss&utm_medium=rss&utm_campaign=benefit-risk-balance-for-medicinal-products",
+      "summary": "This report provides insights into the methods used to evaluate the benefit-risk (BR) balance of a medicinal product. A favourable BR profile must be established for all medicinal products prior to marketing. This balance must be reassessed periodically in the post-marketing setting when new informa",
+      "published": "Tue, 13 May 2025 13:35:08 +0000",
+      "source": "CIOMS",
+      "score": 95,
+      "category": "リスクマネジメント・RMP, PV規制",
+      "blog_title": "医薬品のベネフィット・リスクバランス：ファーマコビジランスの最重要評価軸を徹底解説",
+      "keyword": "ベネフィット・リスク、医薬品安全性、PV評価、リスク管理、ファーマコビジランス"
+    },
+    {
+      "title": "Guillain–Barré Syndrome Following Recombinant Zoster Vaccine in US Medicare Adults Age 65 Years or Older",
+      "url": "https://link.springer.com/article/10.1007/s40264-026-01658-6",
+      "summary": "",
+      "published": "",
+      "source": "Drug Safety Journal",
+      "score": 90,
+      "category": "副作用報告・ICSR, シグナル検出, PV最新ニュース",
+      "blog_title": "ワクチンと重篤副作用：帯状疱疹ワクチン後のギラン・バレー症候群報告から学ぶPVの役割",
+      "keyword": "ワクチン安全性、ギラン・バレー症候群、副作用報告、ファーマコビジランス、PV事例"
+    },
+    {
+      "title": "Severe cutaneous adverse reactions (SCAR)",
+      "url": "https://cioms.ch/publications/product/scar-report/?utm_source=rss&utm_medium=rss&utm_campaign=severe-cutaneous-adverse-reactions-scar",
+      "summary": "In clinical practice, there is mounting concern about the burden of SCAR in relation to novel biologics as well as the increasing cost of diagnosis and management. This consensus report provides unique insights and the latest thinking from renowned experts on this important topic.The skin is among t",
+      "published": "Tue, 22 Apr 2025 10:36:50 +0000",
+      "source": "CIOMS",
+      "score": 90,
+      "category": "副作用報告・ICSR, シグナル検出",
+      "blog_title": "見逃してはいけない重症皮膚副作用（SCAR）：PVが果たす早期発見と患者保護の役割",
+      "keyword": "SCAR、重症皮膚副作用、副作用報告、シグナル検出、ファーマコビジランス、安全性監視"
+    },
+    {
+      "title": "International Society of Pharmacovigilance Advances over Time: Strategies and Results of the Advisory Board from 2022 to 2025",
+      "url": "https://link.springer.com/article/10.1007/s40264-026-01659-5",
+      "summary": "",
+      "published": "",
+      "source": "Drug Safety Journal",
+      "score": 85,
+      "category": "PV最新ニュース, 海外トレンド翻訳",
+      "blog_title": "国際ファーマコビジランス学会（ISoP）の未来戦略：2025年を見据えた安全性監視の進化",
+      "keyword": "ISoP、ファーマコビジランス、PVトレンド、安全性監視戦略、国際学会"
+    },
+    {
+      "title": "US Risk Evaluation and Mitigation Strategies with Elements to Assure Safe Use: A Longitudinal Analysis of REMS Modifications (2008–2022)",
+      "url": "https://link.springer.com/article/10.1007/s40264-026-01654-w",
+      "summary": "",
+      "published": "",
+      "source": "Drug Safety Journal",
+      "score": 85,
+      "category": "リスクマネジメント・RMP, 各国PV規制比較",
+      "blog_title": "米国のREMS（リスク評価・緩和戦略）変遷：2008-2022年のデータから学ぶ安全性確保",
+      "keyword": "REMS、RMP、医薬品安全性、米国PV規制、リスクマネジメント"
+    },
+    {
+      "title": "ç·æ¥å®å¨æ§æå ±ã»å®å¨æ§éå ±ï¼æ£èåãï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/properly-use-alert/0005_c.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 85,
+      "category": "シグナル検出, リスクマネジメント・RMP",
+      "blog_title": "患者さんも知るべき！緊急安全性情報が教える医薬品の危険性とPVの役割",
+      "keyword": "緊急安全性情報、患者向け、医薬品リスク、ファーマコビジランス、リスクコミュニケーション"
+    },
+    {
+      "title": "å»è¬åæ·»ä»ææ¸æ¹è¨ç¸è«ã«åºã¥ãæ·»ä»ææ¸æ¹è¨",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/revision-based-on-the-consultation/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 85,
+      "category": "シグナル検出, PV規制, リスクマネジメント・RMP",
+      "blog_title": "添付文書改訂の舞台裏：医薬品安全性監視が導く重要な情報更新プロセス",
+      "keyword": "添付文書改訂、安全性情報、ファーマコビジランス、PV規制、情報更新"
+    },
+    {
+      "title": "DSUï¼Drug Safety Updateï¼ï¼æ¥æ¬è£½è¬å£ä½é£åä¼çºè¡ï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/dsu/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 85,
+      "category": "PV最新ニュース, 副作用報告・ICSR, シグナル検出",
+      "blog_title": "DSU（Drug Safety Update）で追う！日本製薬業界の最新安全性情報とその裏側",
+      "keyword": "DSU、Drug Safety Update、日本製薬団体連合会、医薬品安全性、PV情報"
+    },
+    {
+      "title": "å®å¨å¯¾ç­ã«é¢ããéç¥ç­",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/0010.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 85,
+      "category": "PV規制, リスクマネジメント・RMP",
+      "blog_title": "医薬品の安全対策通知：PV規制の変化と製薬企業が取るべき行動",
+      "keyword": "安全対策、PV規制、リスクマネジメント、通知、ファーマコビジランス"
+    },
+    {
+      "title": "éç¯¤å¯ä½ç¨ç¾æ£å¥å¯¾å¿ããã¥ã¢ã«ï¼æ£èã»ä¸è¬ã®æ¹åãï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/adr-info/manuals-for-public/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 85,
+      "category": "リスクマネジメント・RMP, 副作用報告・ICSR",
+      "blog_title": "患者・一般の方向け：重篤副作用疾患別対応マニュアルで学ぶ緊急時の対応とPVの知見",
+      "keyword": "重篤副作用、患者向けマニュアル、リスクマネジメント、安全性情報、緊急対応"
+    },
+    {
+      "title": "CIOMS Cumulative Glossary, with a focus on Pharmacovigilance (Version 2.4)",
+      "url": "https://cioms.ch/publications/product/cioms-cumulative-pharmacovigilance-glossary/?utm_source=rss&utm_medium=rss&utm_campaign=cioms-cumulative-pharmacovigilance-glossary",
+      "summary": "This glossary compiles the terms and definitions from published CIOMS reports, with a focus on pharmacovigilance.\n\nWe welcome all feedback. Please e-mail your recommendations to <a href=\"mailto:info@cioms.ch\">info@cioms.ch</a>.",
+      "published": "Thu, 03 Jul 2025 07:27:17 +0000",
+      "source": "CIOMS",
+      "score": 85,
+      "category": "PV規制, MedDRAコーディング, 海外トレンド翻訳",
+      "blog_title": "ファーマコビジランスの羅針盤：CIOMS用語集で学ぶ国際標準PV用語（Version 2.4）",
+      "keyword": "CIOMS、PV用語集、ファーマコビジランス、国際標準、MedDRA、PV規制"
+    },
+    {
+      "title": "å»è¬åã«é¢ããè©ä¾¡ä¸­ã®ãªã¹ã¯ç­ã®æå ±ã«ã¤ãã¦",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/risk-communications/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 75,
+      "category": "シグナル検出, リスクマネジメント・RMP",
+      "blog_title": "医薬品承認審査の最前線：評価中のリスク情報が安全性監視にどう活かされるか",
+      "keyword": "医薬品承認、リスク評価、安全性監視、シグナル検出、PVプロセス"
+    },
+    {
+      "title": "OTCçDSUï¼æ¥æ¬ä¸è¬ç¨å»è¬åé£åä¼çºè¡ï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/otc-dsu/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 75,
+      "category": "PV最新ニュース, 副作用報告・ICSR, シグナル検出",
+      "blog_title": "OTC医薬品の安全性も怠らない！一般用医薬品版DSUの重要性とは？",
+      "keyword": "OTC医薬品、DSU、安全性情報、ファーマコビジランス、一般用医薬品"
+    },
+    {
+      "title": "PMDAããã®å»è¬åé©æ­£ä½¿ç¨ã®ãé¡ãï¼æ£èåãï¼",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/properly-use-alert/0005.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 75,
+      "category": "リスクマネジメント・RMP",
+      "blog_title": "PMDAからのメッセージ：患者さんが知るべき医薬品適正使用のポイントとPVの連携",
+      "keyword": "PMDA、医薬品適正使用、患者向け情報、リスクマネジメント、安全性情報"
+    },
+    {
+      "title": "Korean translation: CIOMS Cumulative Glossary",
+      "url": "https://cioms.ch/publications/product/korean-translation-cioms-cumulative-glossary/?utm_source=rss&utm_medium=rss&utm_campaign=korean-translation-cioms-cumulative-glossary",
+      "summary": "",
+      "published": "Wed, 11 Feb 2026 14:40:02 +0000",
+      "source": "CIOMS",
+      "score": 75,
+      "category": "PV規制, MedDRAコーディング, 海外トレンド翻訳",
+      "blog_title": "CIOMS用語集（韓国語版）から学ぶ：ファーマコビジランス国際標準用語の重要性",
+      "keyword": "CIOMS、PV用語、国際標準、韓国PV、MedDRA"
+    },
+    {
+      "title": "Chinese translation: Introduction to MedDRA Labeling Grouping (MLG)",
+      "url": "https://cioms.ch/publications/product/chinese-translation-introduction-to-meddra-labeling-grouping-mlg/?utm_source=rss&utm_medium=rss&utm_campaign=chinese-translation-introduction-to-meddra-labeling-grouping-mlg",
+      "summary": "Chinese translation of the CIOMS report <a href=\"https://cioms.ch/publications/product/chinese-translation-introduction-to-meddra-labeling-grouping-mlg/\">Introduction to MedDRA Labeling Grouping (MLG) 2024</a>. This report is only available in PDF from CIOMS.",
+      "published": "Fri, 20 Jun 2025 11:42:26 +0000",
+      "source": "CIOMS",
+      "score": 75,
+      "category": "MedDRAコーディング, 海外トレンド翻訳",
+      "blog_title": "MedDRA Labeling Grouping (MLG)入門（中国語版）：PVコーディングの国際標準を理解する",
+      "keyword": "MedDRA、MLG、PVコーディング、中国PV、国際用語"
+    },
+    {
+      "title": "ååæå ±",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/recall-info/0002.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 65,
+      "category": "リスクマネジメント・RMP, PV最新ニュース",
+      "blog_title": "医薬品回収の裏側：安全性問題発覚から回収に至るPVの重要プロセス",
+      "keyword": "医薬品回収、安全性問題、リスク管理、ファーマコビジランス、品質問題"
+    },
+    {
+      "title": "å»è¬åã®é©æ­£ä½¿ç¨ã®ãç¥ãã",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/properly-use-alert/0003.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 65,
+      "category": "リスクマネジメント・RMP",
+      "blog_title": "医薬品適正使用の呼びかけ：PVが支える安全な薬物治療のための情報発信",
+      "keyword": "医薬品適正使用、安全性情報、リスクマネジメント、ファーマコビジランス、薬物治療"
+    },
+    {
+      "title": "Chinese translation: Benefit-risk balance for medicinal products",
+      "url": "https://cioms.ch/publications/product/chinese-translation-benefit-risk-balance-for-medicinal-products/?utm_source=rss&utm_medium=rss&utm_campaign=chinese-translation-benefit-risk-balance-for-medicinal-products",
+      "summary": "The Chinese translation of the CIOMS report <em>Benefit-risk balance for medicinal products</em> is made available by the <span>Hainan Lecheng Institute of Real World Study.</span>",
+      "published": "Mon, 16 Mar 2026 14:05:23 +0000",
+      "source": "CIOMS",
+      "score": 65,
+      "category": "PV規制, 海外トレンド翻訳",
+      "blog_title": "医薬品のベネフィット・リスクバランス：中国語翻訳から見る国際的PV基準の理解",
+      "keyword": "ベネフィット・リスク、医薬品安全性、PV規制、中国PV、国際基準"
+    },
+    {
+      "title": "Estimating the Prevalence of Prescribed Medication Use in Pregnancy with a Systematic Review and Meta-analysis",
+      "url": "https://link.springer.com/article/10.1007/s40264-026-01664-8",
+      "summary": "",
+      "published": "",
+      "source": "Drug Safety Journal",
+      "score": 55,
+      "category": "リスクマネジメント・RMP",
+      "blog_title": "妊婦と薬の安全性：PVが担うリスク評価と妊娠中服薬の最新動向",
+      "keyword": "妊婦、医薬品安全性、妊娠中服薬、ファーマコビジランス、リスク評価"
+    },
+    {
+      "title": "æ£èåå»è¬åã¬ã¤ã",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/items-information/guide-for-patients/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 55,
+      "category": "リスクマネジメント・RMP",
+      "blog_title": "患者向け医薬品ガイドで理解する：あなたの薬の安全性と正しい使い方、PVからの視点",
+      "keyword": "患者向け情報、医薬品ガイド、安全性情報、RMP、医薬品適正使用"
+    },
+    {
+      "title": "ã¯ã¯ãã³æ¥ç¨®ãåããäººã¸ã®ã¬ã¤ã",
+      "url": "https://www.pmda.go.jp/safety/info-services/drugs/items-information/vacc-guide/0001.html",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 55,
+      "category": "リスクマネジメント・RMP",
+      "blog_title": "ワクチン接種の前に知っておきたい安全性情報：副反応への備えとPVの役割",
+      "keyword": "ワクチン安全性、副反応、患者向けガイド、ファーマコビジランス、リスクコミュニケーション"
+    },
+    {
+      "title": "æ·»ä»ææ¸",
+      "url": "https://www.pmda.go.jp/PmdaSearch/iyakuSearch/",
+      "summary": "",
+      "published": "",
+      "source": "PMDA安全対策",
+      "score": 45,
+      "category": "リスクマネジメント・RMP",
+      "blog_title": "医薬品添付文書の読み解き方：安全性情報の宝庫をPV視点で活用する",
+      "keyword": "添付文書、医薬品安全性、ファーマコビジランス、情報源、リスク管理"
+    }
+  ]
+}
