@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICH E2D(R1)改訂とPSUR/PBRERワークフローの最適化：2026年PV部門の実務対応 | ファーマコビジランス最前線</title>
+<meta name="description" content="ICH E2D(R1)の改訂方向と、Periodic Safety Update Report（PSUR/PBRER）作成プロセスを効率化するためのデータフロー・組織運用上のポイントを実務目線で整理します。">
+<link rel="canonical" href="https://pharmaworkerka.github.io/pv-frontline/articles/2026-04-29-ich-e2d-r1-psur-workflow-optimization.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICH E2D(R1)改訂とPSURワークフローの最適化">
+<meta property="og:description" content="PSUR/PBRER作成を効率化するPV部門の実務対応ポイント。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=630&fit=crop&auto=format&q=80">
+<meta property="og:url" content="https://pharmaworkerka.github.io/pv-frontline/articles/2026-04-29-ich-e2d-r1-psur-workflow-optimization.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=630&fit=crop&auto=format&q=80">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ICH E2D(R1)改訂とPSURワークフローの最適化","image":"https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=630&fit=crop&auto=format&q=80","datePublished":"2026-04-29","author":{"@type":"Organization","name":"ファーマコビジランス最前線"}}</script>
+<link rel="stylesheet" href="../assets/style.css">
+</head><body>
+<div data-tag="ml-pr-bar-v1" style="background:#fef3c7;color:#78350f;padding:6px 12px;text-align:center;font-size:12px;border-bottom:1px solid #fcd34d;font-family:system-ui,sans-serif;line-height:1.4">当サイトの記事には広告（アフィリエイトリンク）が含まれる場合があります。掲載順位や紹介内容は当サイトの編集方針に基づきます。</div>
+<nav class="filter-nav"><a href="../index.html" class="filter-btn">← トップに戻る</a></nav>
+<main class="article-body">
+<img class="article-hero-img" src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=630&fit=crop&auto=format&q=80" alt="ICH E2D(R1) PSUR ワークフロー最適化">
+<p class="article-meta">📅 2026-04-29 · 🏷️ ファーマコビジランス</p>
+<h1>ICH E2D(R1)改訂とPSUR/PBRERワークフローの最適化：2026年PV部門の実務対応</h1>
+<p>ICH E2D（市販後安全性情報の取り扱い）の改訂作業はR1としてICH会議体で進行中で、2026年時点ではStep段階に応じた検討が公開されています。E2D(R1)は市販後の自発報告・文献検索・PSUR/PBRER（Periodic Safety Update Report / Periodic Benefit-Risk Evaluation Report）作成プロセスに関わる現場に幅広く影響します。本稿ではPV部門の実務担当者が押さえるべき主要論点と、PSUR/PBRERワークフロー最適化の実装ポイントを整理します。</p>
+
+<h2>E2D(R1)で議論されている主要トピック</h2>
+<p>E2D(R1)で議論されている主要トピックは、現状公開されているドラフト・コンセプトペーパーの範囲では概ね次のように整理できます。</p>
+<ul>
+<li><b>定義の整理：</b>市販後の「Solicited（依頼に基づく報告）」と「Unsolicited（自発報告）」の境界、Patient Support Programやデジタルヘルスツール経由で得られる情報の扱い。</li>
+<li><b>SNS・デジタル情報源の取り扱い：</b>SNS、患者コミュニティ、デジタルヘルスアプリから得られる安全性情報をどう一次評価し、ICSRに昇格させるか。</li>
+<li><b>定義の調和：</b>FDA・EMA・PMDAそれぞれで運用が異なる項目の用語整合。</li>
+<li><b>ICH E2B(R3)との接続：</b>個別症例報告の電子提出仕様との整合性確認。</li>
+</ul>
+<p>R1の最終形は今後のICH会議で確定する流れであり、現時点でのドラフト本文や進捗状況はICHのE2D(R1)ページで確認することを推奨します。</p>
+
+<h2>PSUR/PBRERワークフローの典型的なボトルネック</h2>
+<p>PSUR/PBRERは品目ごとに半年〜年次で当局へ提出する周期的安全性報告書で、PV部門にとって最大級のドキュメント業務の一つです。多くの企業で見られる典型的なボトルネックは次の通りです。</p>
+<ol>
+<li><b>データロックポイント（DLP）からドラフト着手までのタイムロス：</b>DLPでデータを止めても、各種集計表の発行までに時間がかかり、ドラフト着手が遅れる。</li>
+<li><b>文献検索の人手作業：</b>PubMed/Embase/EMBASE等の検索結果スクリーニングを毎回手動で行うと、件数次第で大きな工数を消費。</li>
+<li><b>シグナル評価結果のPSURへの転記：</b>シグナル管理プラットフォームとPSURテンプレートが分離していると、転記時の整合確認に時間がかかる。</li>
+<li><b>当局別フォーマット差：</b>EMA・PMDA・FDAでサブミッション要件・分量が異なり、品目ごとに地域別カスタマイズが発生。</li>
+</ol>
+
+<h2>ワークフロー最適化の打ち手</h2>
+<p>PSUR/PBRERワークフローを最適化するための実装ポイントを、現場で効果が高い順に整理します。</p>
+<ul>
+<li><b>1. データソースの上流標準化：</b>セーフティデータベース（Argus、ArisGlobal LifeSphere等）の集計テーブル設計をPSUR要件に合わせて事前定義。DLP直後に標準集計表が自動生成される運用に。</li>
+<li><b>2. 文献検索のシステム化：</b>PubMed等の検索式・除外語・スクリーニング基準をSOPで標準化し、AIスクリーニング補助（除外候補の事前提示）を取り入れる。最終判定は人が行う原則を維持。</li>
+<li><b>3. シグナル管理とPSURの連携：</b>シグナル評価結論（Refuted / Pending / Confirmed等）と関連根拠を構造化データで保持し、PSURの該当セクションへ自動引用できる仕組みを構築。</li>
+<li><b>4. 当局別テンプレート管理：</b>共通本文＋地域別Annex構造でテンプレートを設計し、地域別の差分管理を最小化。</li>
+<li><b>5. レビュー履歴の電子化：</b>承認ワークフローを電子署名対応にし、紙ベースの最終承認を廃止する。</li>
+</ul>
+<p>これらは個々に独立した改善ですが、組み合わせると年間でPV部門のPSUR作業時間を相当規模で短縮できる可能性があります。組織のPV成熟度に応じて段階導入することが現実的です。</p>
+
+<h2>E2D(R1)対応で今から準備しておくべきこと</h2>
+<p>R1の最終Step確定を待つだけでなく、現時点で着手しておけることがあります。</p>
+<ul>
+<li><b>SNS・患者コミュニティ情報のSOP整備：</b>マーケ部門・MR・PSP（Patient Support Program）から流入する安全性情報の一次評価ルートと記録方法。</li>
+<li><b>用語マスタの見直し：</b>Solicited/Unsolicited、Spontaneous、Other Reportの社内定義をE2D(R1)の論点に合わせて整理。</li>
+<li><b>システム要件の棚卸し：</b>セーフティDBや文献監視システムが将来の要件追加に対応できるかを評価。</li>
+<li><b>JP特有要件との照合：</b>PMDAの安全性定期報告（市販直後調査・再審査期間中の報告）との重複部分の整理。</li>
+</ul>
+<p>E2D(R1)は「劇的に新しい義務」を増やすというより、「既存義務の境界をはっきりさせる」改訂の色合いが強いと予想されます。社内SOPと用語の整合を先取りで整えておくことで、ガイドライン確定後の対応コストを抑えられます。</p>
+
+<h2>まとめ</h2>
+<p>ICH E2D(R1)はPV部門にとって、ICSR取扱いの定義整理とSNS・デジタル情報源の扱いを明確化する重要な改訂です。同時に、PSUR/PBRERのワークフローはデータ標準化・文献検索効率化・シグナル連携・当局別テンプレート設計の4方向で最適化余地が大きく、E2D(R1)対応の動きと合わせて運用刷新する好機といえます。最終確定版の動向はICH公式ページで継続フォローし、社内SOPとシステム要件を段階的に整えていく進め方が現実解です。PV部門が市販後の「事務作業集団」から「ベネフィット・リスク評価のリードチーム」へ進化するためにも、ワークフロー最適化への投資は2026年中の重点テーマとして推奨されます。</p>
+
+<p style="color:#6b7280;font-size:0.8rem;margin-top:40px;">本記事は情報提供を目的としており、規制要件の最終確認は各国規制当局の公式ドキュメントを参照してください。実務適用の判断は読者の責任で行ってください。</p>
+<a href="../index.html" class="back-link">← 他の記事を見る</a>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<p class="copyright">© 2026 ファーマコビジランス最前線</p>
+</div></footer>
+</body></html>
