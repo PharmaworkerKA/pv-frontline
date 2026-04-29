@@ -1,9 +1,6 @@
 name: PV Frontline - Auto Generate
 
 on:
-  schedule:
-    # 毎日 JST 12:00 (UTC 3:00) - API費用削減のため1日1回に変更
-    - cron: '30 17 * * *'
   workflow_dispatch:
 
 permissions:
